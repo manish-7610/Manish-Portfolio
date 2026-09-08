@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Manish Kevat · Full Stack Web Developer</title>
+    <meta name="description" content="Manish Kevat — Full Stack Web Developer. BCA Graduate, certified in Software Development Engineering with Applied AI from Masai School (IIT Patna collaboration)." />
+    <link rel="canonical" href="https://manish7610portfolio.netlify.app/" />
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Manish Kevat · Full Stack Web Developer" />
+    <meta property="og:description" content="Manish Kevat — Full Stack Web Developer. BCA Graduate, certified in Software Development Engineering with Applied AI from Masai School." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://manish7610portfolio.netlify.app/" />
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Manish Kevat · Full Stack Web Developer" />
+    <meta name="twitter:description" content="Manish Kevat — Full Stack Web Developer. BCA Graduate, certified in Software Development Engineering with Applied AI." />
+
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0a0a0f" />
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Manish Kevat",
+        "jobTitle": "Full Stack Web Developer",
+        "url": "https://manish7610portfolio.netlify.app/",
+        "email": "manishkevat905@gmail.com",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Bhopal",
+            "addressRegion": "Madhya Pradesh",
+            "addressCountry": "India"
+        },
+        "alumniOf": {
+            "@type": "EducationalOrganization",
+            "name": "Vishlesan i-Hub, IIT Patna × Masai",
+            "description": "Software Development Engineering with Applied AI"
+        }
+    }
+    </script>
+
+    <!-- Favicon -->
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='20' fill='%230a0a0f'/%3E%3Ctext x='50' y='68' font-size='52' text-anchor='middle' font-family='system-ui' fill='%2300d4ff'%3EMK%3C/text%3E%3C/svg%3E" type="image/svg+xml" />
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+    <!-- ============================
+    LOADING SCREEN
+    ============================ -->
+    <div class="loader" id="loader" role="status" aria-label="Loading">
+        <div class="loader-ring" aria-hidden="true"></div>
+        <span class="loader-text">Loading</span>
+    </div>
+
+    <!-- ============================
+    CUSTOM CURSOR
+    ============================ -->
+    <div class="cursor-dot" id="cursorDot" aria-hidden="true"></div>
+    <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+    <!-- ============================
+    SCROLL PROGRESS
+    ============================ -->
+    <div class="scroll-progress" id="scrollProgress" role="progressbar" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100" aria-label="Scroll progress"></div>
+
+    <!-- ============================
+    MOUSE GLOW
+    ============================ -->
+    <div class="mouse-glow" id="mouseGlow" aria-hidden="true"></div>
+
+    <!-- ============================
+    NAVBAR
+    ============================ -->
+    <header class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+
+        <!-- Profile photo instead of MK. text -->
+        <a href="#hero" class="nav-logo" aria-label="Manish Kevat — Home">
+            <img
+                src="assets/manish-pic.png"
+                alt="Manish Kevat - Full Stack Web Developer"
+                class="nav-logo-img"
+            />
+        </a>
+
+        <ul class="nav-links" id="navLinks" role="menubar">
+            <li role="none"><a href="#hero"         role="menuitem" class="active">Home</a></li>
+            <li role="none"><a href="#about"        role="menuitem">About</a></li>
+            <li role="none"><a href="#skills"       role="menuitem">Skills</a></li>
+            <li role="none"><a href="#projects"     role="menuitem">Projects</a></li>
+            <li role="none"><a href="#experience"   role="menuitem">Experience</a></li>
+            <li role="none"><a href="#certificates" role="menuitem">Certificates</a></li>
+            <li role="none">
+                <a href="https://drive.google.com/file/d/14YfVrMuzC1QHg3VgeyfR-BC8U-i1vni-/view?usp=sharing"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   role="menuitem"
+                   class="nav-resume">Resume</a>
+            </li>
+            <li role="none"><a href="#contact" role="menuitem">Contact</a></li>
+            <li role="none">
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle theme">
+                    <i class="fas fa-moon" id="themeIcon" aria-hidden="true"></i>
+                </button>
+            </li>
+        </ul>
+
+        <button class="menu-btn" id="menuBtn" aria-label="Toggle menu" aria-expanded="false">
+            <i class="fas fa-bars" aria-hidden="true"></i>
+        </button>
+    </header>
+
+    <!-- ============================
+    MAIN CONTENT
+    ============================ -->
+    <main class="main" id="main">
+
+        <!-- ===== HERO ===== -->
+        <section id="hero" class="hero visible" aria-labelledby="hero-title">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-badge">
+                        <span class="dot" aria-hidden="true"></span>
+                        Open to opportunities
+                    </div>
+                    <h1 id="hero-title">
+                        Hi, I'm <br><span class="gradient">Manish Kevat</span>
+                    </h1>
+                    <div class="hero-typing" aria-live="polite">
+                        <span id="typedText"></span><span class="cursor-blink" aria-hidden="true"></span>
+                    </div>
+                    <p class="hero-desc">
+                        Full Stack Web Developer · BCA Graduate · Certified in Software Development Engineering
+                        with Applied AI from Masai School (IIT Patna Collaboration).
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#contact" class="btn-primary">
+                            <i class="fas fa-paper-plane" aria-hidden="true"></i> Let's Connect
+                        </a>
+                        <a href="https://drive.google.com/file/d/14YfVrMuzC1QHg3VgeyfR-BC8U-i1vni-/view?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           class="btn-secondary">
+                            <i class="fas fa-file-alt" aria-hidden="true"></i> Resume
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Hero visual: avatar + floating badges outside the circle -->
+                <div class="hero-visual">
+                    <div class="hero-avatar">
+                        <img src="assets/manish-pic.png"
+                             alt="Manish Kevat - Full Stack Web Developer"
+                             class="profile-pic"
+                             width="320"
+                             height="320"
+                             onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+                        <span class="initials" style="display:none;">MK</span>
+                        <span class="ring-glow" aria-hidden="true"></span>
+                        <span class="ring-glow" aria-hidden="true"></span>
+                    </div>
+                    <!-- Badges positioned on .hero-visual (outside avatar overflow:hidden) -->
+                    <span class="float-badge float-badge--fullstack" aria-hidden="true">
+                        <i class="fas fa-code"></i> Full Stack
+                    </span>
+                    <span class="float-badge float-badge--genai" aria-hidden="true">
+                        <i class="fas fa-brain"></i> GenAI
+                    </span>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== ABOUT ===== -->
+        <section id="about" aria-labelledby="about-title">
+            <span class="section-label">About</span>
+            <h2 class="section-title" id="about-title">Who <span class="highlight">I Am</span></h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>
+                        I'm <strong>Manish Kevat</strong>, a Full Stack Web Developer based in
+                        <strong>Bhopal, Madhya Pradesh</strong>. I hold a <strong>Bachelor of Computer
+                        Applications (BCA)</strong> from Makhanlal Chaturvedi National University and
+                        completed the <strong>Software Development Engineering with Applied AI</strong>
+                        program at Vishlesan i-Hub, IIT Patna × Masai.
+                    </p>
+                    <p>
+                        I build full stack web applications using <strong>HTML5, CSS3, JavaScript,
+                        Python, and FastAPI</strong>, with backend APIs connected to relational databases
+                        (MySQL, Supabase). I work with <strong>Git &amp; GitHub</strong> for
+                        version control and am actively exploring <strong>AI and Generative AI</strong>
+                        in web development.
+                    </p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="5">5+</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number" data-count="1">1</span>
+                        <span class="stat-label">Certification</span>
+                    </div>
+                    <div class="stat-card">
+                        <span class="stat-number">BCA</span>
+                        <span class="stat-label">Degree</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== JOURNEY TIMELINE (Education only) ===== -->
+        <section id="journey" aria-labelledby="journey-title">
+            <span class="section-label">Journey</span>
+            <h2 class="section-title" id="journey-title">My <span class="highlight">Path</span></h2>
+            <div class="timeline">
+
+                <div class="timeline-item">
+                    <span class="timeline-date">2023 – 2026</span>
+                    <h3 class="timeline-title">Bachelor of Computer Applications (BCA)</h3>
+                    <p class="timeline-sub">Makhanlal Chaturvedi National University · Bhopal, Madhya Pradesh</p>
+                    <p class="timeline-desc">Undergraduate degree focused on software development, programming fundamentals, and computer science concepts.</p>
+                </div>
+
+                <div class="timeline-item">
+                    <span class="timeline-date">Feb 2026 – Aug 2026</span>
+                    <h3 class="timeline-title">Software Development Engineering with Applied AI</h3>
+                    <p class="timeline-sub">Vishlesan i-Hub, IIT Patna × Masai · Patna, Bihar</p>
+                    <p class="timeline-desc">Intensive program covering full-stack web development, data structures &amp; algorithms, backend APIs with Python/FastAPI, databases, and applied AI concepts.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== SKILLS ===== -->
+        <section id="skills" aria-labelledby="skills-title">
+            <span class="section-label">Skills</span>
+            <h2 class="section-title" id="skills-title">Skills &amp; <span class="highlight">Tools</span></h2>
+
+            <div class="skills-categories">
+
+                <!-- Languages -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Languages</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">HTML5</span>
+                        <span class="skill-pill">CSS3</span>
+                        <span class="skill-pill">JavaScript</span>
+                        <span class="skill-pill">Python</span>
+                        <span class="skill-pill">SQL</span>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Backend</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">FastAPI</span>
+                    </div>
+                </div>
+
+                <!-- Databases -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Databases</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">MySQL</span>
+                        <span class="skill-pill">Supabase</span>
+                    </div>
+                </div>
+
+                <!-- AI / GenAI -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">AI / GenAI</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Artificial Intelligence</span>
+                        <span class="skill-pill">Generative AI</span>
+                    </div>
+                </div>
+
+                <!-- Tools -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Tools</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Git</span>
+                        <span class="skill-pill">GitHub</span>
+                        <span class="skill-pill">Kiro</span>
+                        <span class="skill-pill">VS Code</span>
+                        <span class="skill-pill">Postman</span>
+                    </div>
+                </div>
+
+                <!-- Deployment -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Deployment</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Netlify</span>
+                        <span class="skill-pill">Render</span>
+                        <span class="skill-pill">Railway</span>
+                    </div>
+                </div>
+
+                <!-- DSA -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">DSA</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Data Structures &amp; Algorithms</span>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="skill-category">
+                    <h3 class="skill-category-title">Soft Skills</h3>
+                    <div class="skill-pills">
+                        <span class="skill-pill">Problem Solving</span>
+                        <span class="skill-pill">Communication</span>
+                        <span class="skill-pill">Time Management</span>
+                        <span class="skill-pill">Adaptability</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== PROJECTS ===== -->
+        <section id="projects" aria-labelledby="projects-title">
+            <span class="section-label">Projects</span>
+            <h2 class="section-title" id="projects-title">Featured <span class="highlight">Work</span></h2>
+            <div class="projects-grid">
+
+                <!-- Project 1 — SkillSwap -->
+                <article class="project-card">
+                    <div class="icon"><i class="fas fa-exchange-alt" aria-hidden="true"></i></div>
+                    <h3>SkillSwap</h3>
+                    <p>
+                        A full-stack skill exchange platform where users can list, discover, and
+                        swap skills with each other. Features user authentication, skill listings,
+                        and a matching system to connect people who want to learn and teach.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        <span>Python</span><span>FastAPI</span><span>SQL</span>
+                    </div>
+                    <div class="links">
+                        <a href="https://skillswap-manish.netlify.app/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Live demo of SkillSwap">
+                            <i class="fas fa-external-link-alt"></i> Live
+                        </a>
+                        <a href="https://github.com/manish-7610/SkillSwap"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="SkillSwap GitHub repository">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 2 — TaskFlow2 -->
+                <article class="project-card">
+                    <div class="icon"><i class="fas fa-tasks" aria-hidden="true"></i></div>
+                    <h3>TaskFlow2</h3>
+                    <p>
+                        AI-powered full-stack task management application. Features user authentication,
+                        task CRUD operations, and AI-powered task generation to help users manage
+                        their work efficiently.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        <span>Python</span><span>FastAPI</span><span>SQL</span>
+                    </div>
+                    <div class="links">
+                        <a href="https://taskflow2-manish.netlify.app/login.html"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Live demo of TaskFlow2">
+                            <i class="fas fa-external-link-alt"></i> Live
+                        </a>
+                        <a href="https://github.com/manish-7610/TaskFlow2"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="TaskFlow2 GitHub repository">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Project 3 — Zomato Notes -->
+                <article class="project-card">
+                    <div class="icon"><i class="fas fa-sticky-note" aria-hidden="true"></i></div>
+                    <h3>Zomato Notes</h3>
+                    <p>
+                        Full-stack notes application with JWT authentication, full CRUD operations,
+                        AI-powered tag suggestions and summaries, and semantic search — built with
+                        FastAPI and SQL.
+                    </p>
+                    <div class="tags">
+                        <span>HTML</span><span>CSS</span><span>JavaScript</span>
+                        <span>Python</span><span>FastAPI</span><span>SQL</span>
+                    </div>
+                    <div class="links">
+                        <a href="https://github.com/manish-7610/zomato-notes"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Zomato Notes GitHub repository">
+                            <i class="fab fa-github"></i> Code
+                        </a>
+                    </div>
+                </article>
+
+            </div>
+
+            <!-- More Projects -->
+            <div class="projects-more">
+                <a href="https://github.com/manish-7610"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="projects-more-link"
+                   aria-label="View more projects on GitHub">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    More Projects on GitHub
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== EXPERIENCE ===== -->
+        <section id="experience" aria-labelledby="experience-title">
+            <span class="section-label">Experience</span>
+            <h2 class="section-title" id="experience-title">Work <span class="highlight">Experience</span></h2>
+            <div class="experience-grid">
+
+                <div class="experience-card">
+                    <div class="exp-header">
+                        <div class="exp-icon">
+                            <i class="fas fa-ambulance" aria-hidden="true"></i>
+                        </div>
+                        <div class="exp-meta">
+                            <h3 class="exp-title">Emergency Response Officer (ERO)</h3>
+                            <p class="exp-org">Jai Ambey Emergency Services (I) Pvt. Ltd. · MP JAES 108 Ambulance</p>
+                            <span class="exp-date">October 2025 – December 2025 · Bhopal, Madhya Pradesh</span>
+                        </div>
+                    </div>
+                    <ul class="exp-duties">
+                        <li>Coordinated emergency response operations as part of the MP JAES 108 Ambulance service.</li>
+                        <li>Managed critical communications between dispatch, field teams, and medical staff.</li>
+                        <li>Responded to emergency calls and ensured timely dispatch of ambulance resources.</li>
+                        <li>Maintained accurate records of emergency incidents and response outcomes.</li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== CERTIFICATES ===== -->
+        <section id="certificates" aria-labelledby="certs-title">
+            <span class="section-label">Certificates</span>
+            <h2 class="section-title" id="certs-title">My <span class="highlight">Credentials</span></h2>
+            <div class="certs-grid">
+                <div class="cert-card">
+                    <span class="icon"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span>
+                    <div class="info">
+                        <h4>Software Development Engineering with Applied AI</h4>
+                        <p>Vishlesan i-Hub, IIT Patna × Masai</p>
+                        <span class="org">February 2026 – August 2026</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ===== GITHUB ACTIVITY ===== -->
+        <section id="github-activity" aria-labelledby="github-activity-title">
+            <span class="section-label">GitHub</span>
+            <h2 class="section-title" id="github-activity-title">GitHub <span class="highlight">Activity</span></h2>
+            <p class="section-desc">Live activity from <a href="https://github.com/manish-7610" target="_blank" rel="noopener noreferrer" class="inline-link">github.com/manish-7610</a></p>
+
+            <div class="github-activity-card">
+                <img
+                    src="https://streak-stats.demolab.com/?user=manish-7610&theme=dark&background=0a0a0f&border=ffffff14&stroke=00d4ff&ring=7c3aed&fire=ff6b6b&currStreakLabel=00d4ff&sideLabels=b0b0c8&dates=7a7a92&sideNums=f0f0f5&currStreakNum=f0f0f5&hide_border=false"
+                    alt="Manish Kevat GitHub streak stats"
+                    class="github-streak-img"
+                    loading="lazy"
+                    onerror="this.closest('.github-activity-card').classList.add('img-error')"
+                />
+                <!-- Fallback shown if image fails to load -->
+                <div class="github-fallback" aria-hidden="true">
+                    <i class="fab fa-github"></i>
+                    <p>Activity stats temporarily unavailable.</p>
+                    <a href="https://github.com/manish-7610" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                </div>
+            </div>
+
+            <div class="github-cta">
+                <a href="https://github.com/manish-7610"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   class="github-cta-btn"
+                   aria-label="View full GitHub profile for manish-7610">
+                    <i class="fab fa-github" aria-hidden="true"></i>
+                    View Full Profile on GitHub
+                    <i class="fas fa-arrow-right" aria-hidden="true"></i>
+                </a>
+            </div>
+        </section>
+
+        <!-- ===== CONTACT ===== -->
+        <section id="contact" aria-labelledby="contact-title">
+            <span class="section-label">Contact</span>
+            <h2 class="section-title" id="contact-title">Let's <span class="highlight">Connect</span></h2>
+            <div class="contact-wrap">
+
+                <!-- Left: contact details -->
+                <div class="contact-info">
+                    <p>Have a project in mind or want to collaborate? Reach out — I'd love to hear from you.</p>
+
+                    <div class="contact-item">
+                        <span class="icon"><i class="fas fa-envelope" aria-hidden="true"></i></span>
+                        <div class="text">
+                            <span class="label">Email</span>
+                            <span class="value" id="emailValue">manishkevat905@gmail.com</span>
+                        </div>
+                        <button class="copy-btn" id="copyEmail" aria-label="Copy email address">
+                            <i class="fas fa-copy" aria-hidden="true"></i>
+                        </button>
+                    </div>
+
+                    <div class="contact-item">
+                        <span class="icon"><i class="fas fa-map-marker-alt" aria-hidden="true"></i></span>
+                        <div class="text">
+                            <span class="label">Location</span>
+                            <span class="value">Bhopal, Madhya Pradesh</span>
+                        </div>
+                    </div>
+
+                    <div class="contact-social">
+                        <a href="https://github.com/manish-7610"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="GitHub profile">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/manish-kevat-467aa9288/"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="LinkedIn profile">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://drive.google.com/file/d/14YfVrMuzC1QHg3VgeyfR-BC8U-i1vni-/view?usp=sharing"
+                           target="_blank"
+                           rel="noopener noreferrer"
+                           aria-label="Resume">
+                            <i class="fas fa-file-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: contact actions -->
+                <div class="contact-actions">
+                    <p>
+                        The quickest way to reach me is via email or LinkedIn.
+                        Click below to get in touch directly.
+                    </p>
+                    <a href="mailto:manishkevat905@gmail.com"
+                       class="contact-action-btn primary-action"
+                       aria-label="Send email to Manish Kevat">
+                        <i class="fas fa-envelope"></i>
+                        Email Me
+                    </a>
+                    <a href="https://www.linkedin.com/in/manish-kevat-467aa9288/"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-action-btn"
+                       aria-label="Connect on LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                        Connect on LinkedIn
+                    </a>
+                    <a href="https://drive.google.com/file/d/14YfVrMuzC1QHg3VgeyfR-BC8U-i1vni-/view?usp=sharing"
+                       target="_blank"
+                       rel="noopener noreferrer"
+                       class="contact-action-btn"
+                       aria-label="View Resume">
+                        <i class="fas fa-file-alt"></i>
+                        View Resume
+                    </a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ===== FOOTER ===== -->
+        <footer class="footer" role="contentinfo">
+            <p>&copy; 2026 Manish Kevat</p>
+            <div class="links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#projects">Projects</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </footer>
+
+    </main>
+
+    <!-- ============================
+    BACK TO TOP
+    ============================ -->
+    <button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">
+        <i class="fas fa-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ============================
+    TOAST
+    ============================ -->
+    <div class="toast" id="toast" role="status" aria-live="polite">
+        <i class="fas fa-check-circle" aria-hidden="true"></i>
+        <span id="toastMessage">Copied!</span>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
